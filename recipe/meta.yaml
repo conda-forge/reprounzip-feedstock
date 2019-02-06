@@ -1,6 +1,6 @@
 {% set name = "reprounzip" %}
-{% set version = "1.0.13" %}
-{% set sha256 = "f7ab8c58a0546e64b9f23f4df042a45143b97fab22a36a2d0d9d1fda5dd53bf3" %}
+{% set version = "1.0.16" %}
+{% set sha256 = "699065cf81e3769f214ff9a1c8ab65415bf77ec4cc7c995b4e4cdfb75a1e43d6" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -24,6 +24,7 @@ requirements:
   run:
     - python
     - setuptools  # for pkg_resources
+    - distro
     - pyyaml
     - requests
     - rpaths >=0.8

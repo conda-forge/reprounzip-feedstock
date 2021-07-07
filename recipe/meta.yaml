@@ -1,6 +1,6 @@
 {% set name = "reprounzip" %}
-{% set version = "1.0.16" %}
-{% set sha256 = "699065cf81e3769f214ff9a1c8ab65415bf77ec4cc7c995b4e4cdfb75a1e43d6" %}
+{% set version = "1.1" %}
+{% set sha256 = "33aafa37803a5e6b73d8077ce818dfc7889696d8e580215cc647eede900e320f" %}
 
 package:
   name: {{ name|lower }}
@@ -19,16 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=2.7,<3|>=3.5
     - setuptools
   run:
-    - python
+    - python >=2.7,<3|>=3.5
     - setuptools  # for pkg_resources
     - distro
     - pyyaml
     - requests
     - rpaths >=0.8
     - usagestats >=0.3
+    - pyelftools
 
 test:
   imports:
@@ -39,7 +40,7 @@ test:
     - reprounzip --help
 
 about:
-  home: http://github.com/ViDA-NYU/reprozip
+  home: http://github.com/VIDA-NYU/reprozip
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
@@ -53,7 +54,7 @@ about:
     (packing step). A reviewer can then extract the experiment in his
     environment to reproduce the results (unpacking step).
   doc_url: https://docs.reprozip.org/
-  dev_url: https://github.com/ViDA-NYU/reprozip
+  dev_url: https://github.com/VIDA-NYU/reprozip
 
 extra:
   recipe-maintainers:

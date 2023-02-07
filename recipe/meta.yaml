@@ -1,6 +1,6 @@
 {% set name = "reprounzip" %}
-{% set version = "1.1" %}
-{% set sha256 = "33aafa37803a5e6b73d8077ce818dfc7889696d8e580215cc647eede900e320f" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "051364ff599d2ae7fb9ca0bd0dc3da446be63dd0c251f2fdea125a8114100097" %}
 
 package:
   name: {{ name|lower }}

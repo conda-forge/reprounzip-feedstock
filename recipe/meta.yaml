@@ -23,6 +23,7 @@ requirements:
     - setuptools
   run:
     - python >=2.7,<3|>=3.5
+    - setuptools  # for distutils
     - importlib-metadata
     - distro
     - pyyaml
